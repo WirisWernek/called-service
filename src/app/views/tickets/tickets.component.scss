@@ -1,0 +1,12 @@
+.__col {
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+}
+
+.ticket {
+	transition: transform 0.4s;
+	&:hover,
+	&:focus {
+		transform: scale(1.025);
+	}
+}

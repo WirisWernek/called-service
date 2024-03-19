@@ -1,0 +1,18 @@
+<header>
+	<app-navbar></app-navbar>
+</header>
+<main class="flex flex-col justify-center items-center w-100">
+	<div class="w-[90%] px-4 lg:w-1/2" *ngFor="let ticket of tickets$ | async">
+		<div class="bg-white shadow-lg rounded-lg overflow-hidden my-6 grid grid-cols-[auto,1fr] ticket">
+			<div class="bg-gray-100 px-5 py-2   grid items-end justify-center __col h-full">
+				<button (click)="verTicket(ticket.id!)" class="text-blue-600 font-medium hover:text-blue-800">Ver mais</button>
+			</div>
+			<div class="p-6">
+				<h2 class="text-xl font-semibold text-gray-800 mb-2">{{ticket.titulo}}</h2>
+				<h3 class="text-gray-700 mb-2">Solicitante: {{ticket.solicitante}}</h3>
+				<h5 class="text-gray-700 mb-3">{{ticket.categoria | uppercase}}</h5>
+				<p class="text-gray-600">{{ticket.descricao}}</p>
+			</div>
+		</div>
+	</div>
+</main>

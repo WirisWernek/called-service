@@ -1,10 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { FormTicketComponent } from './views/form-ticket/form-ticket.component';
+import { LoginComponent } from './views/login/login.component';
+import { TicketsComponent } from './views/tickets/tickets.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: LoginComponent,
+  },
+  {
+    path: 'tickets',
+    component: TicketsComponent,
+  },
+  {
+    path: 'form',
+    component: FormTicketComponent,
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: '',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
