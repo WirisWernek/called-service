@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from './../../services/auth.service';
 
 @Component({
-	selector: 'app-login',
-	templateUrl: './login.component.html',
-	styleUrls: ['./login.component.scss'],
+	selector: 'app-register',
+	templateUrl: './register.component.html',
+	styleUrl: './register.component.scss',
 })
-export class LoginComponent {
+export class RegisterComponent {
 	form!: FormGroup;
 	errorMessage: string | null = null;
 	constructor(
@@ -19,6 +19,7 @@ export class LoginComponent {
 		private authService: AuthService
 	) {
 		this.form = this.fb.group({
+			username: ['', Validators.required],
 			email: ['', Validators.required],
 			password: ['', Validators.required],
 		});
@@ -26,9 +27,9 @@ export class LoginComponent {
 
 	onSubmit(): void {
 		const rawForm = this.form.getRawValue();
-		this.authService.login(rawForm.email,  rawForm.password).subscribe({
+		this.authService.register(rawForm.email, rawForm.username, rawForm.password).subscribe({
 			next: () => {
-				this.router.navigateByUrl('/tickets');
+				this.router.navigateByUrl('/');
 			},
 			error: (err) => {
 				this.errorMessage = err.code;
