@@ -22,6 +22,8 @@ export class RegisterComponent {
 			username: ['', Validators.required],
 			email: ['', Validators.required],
 			password: ['', Validators.required],
+			confirmPassword: ['', Validators.required],
+			acceptTerms: ['', Validators.required],
 		});
 	}
 
@@ -29,7 +31,7 @@ export class RegisterComponent {
 		const rawForm = this.form.getRawValue();
 		this.authService.register(rawForm.email, rawForm.username, rawForm.password).subscribe({
 			next: () => {
-				this.router.navigateByUrl('/');
+				this.router.navigateByUrl('/login');
 			},
 			error: (err) => {
 				this.errorMessage = err.code;

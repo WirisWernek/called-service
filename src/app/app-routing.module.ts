@@ -7,7 +7,7 @@ import { TicketsComponent } from './views/tickets/tickets.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
     component: LoginComponent,
   },
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
   {
     path: '**',
     pathMatch: 'full',
-    redirectTo: '',
+    redirectTo: 'login',
   },
 ];
 

@@ -3,6 +3,8 @@ export interface TicketModel {
 	titulo: string;
 	categoria: string;
 	descricao: string;
+	solicitanteEmail?: string;
 	solicitante: string;
+	atendenteEmail?: string;
 	atendente?: string;
 }
