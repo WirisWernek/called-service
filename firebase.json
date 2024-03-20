@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "called-service",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

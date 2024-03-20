@@ -2,7 +2,8 @@
 	<app-navbar></app-navbar>
 </header>
 <main class="flex flex-col justify-center items-center w-100">
-	<div class="w-[90%] px-4 lg:w-1/2" *ngFor="let ticket of tickets$ | async">
+	@for (ticket of tickets$ | async; track $index) {
+	<div class="w-[90%] px-4 lg:w-1/2">
 		<div class="bg-white shadow-lg rounded-lg overflow-hidden my-6 grid grid-cols-[auto,1fr] ticket">
 			<div class="bg-gray-100 px-5 py-2   grid items-end justify-center __col h-full">
 				<button (click)="verTicket(ticket.id!)" class="text-blue-600 font-medium hover:text-blue-800">Ver mais</button>
@@ -15,4 +16,5 @@
 			</div>
 		</div>
 	</div>
+	}
 </main>

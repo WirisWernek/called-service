@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "called-service": {
+      "hosting": {
+        "called-service": [
+          "called-service"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "called-service"
+  }
+}
