@@ -1,27 +1,29 @@
 # CalledService
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.5.
+<!-- <div align="center">
+	<img width="800" src="https://i.ibb.co/NFZ4fMj/Cart-o-Digital-V2.png">
+</div> -->
 
-## Development server
+## 🔥 Sobre
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+A ideia do projeto é ser uma pagina simples e de fácil navegação que possa ser acessada principalmente por smartphones, e que traga as principais informações de uma pessoa, sendo elas desde de dados de contato, currículo ou redes sociais.
 
-## Code scaffolding
+<!-- Atualmente o projeto se encontra publicado na [Vercel](https://dbc-wiriswernek.vercel.app), e usa como base o Angular com Typescript e Bootstrap 5. -->
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🔨 Como executar esta aplicação?
 
-## Build
+### Padrão
+Para rodar a aplicação voce deve:
+- Primeiro clonar este repositório
+- Navegar para a pasta `called-service`
+- Executar o comando `npm i` para instalar as dependências do projeto
+- Executar o comando `ng s` ou `ng serve` para rodar a aplicação
+- Abrir em seu navegador de preferência a URL `http://localhost:4200/` para acessar a aplicação
+- Se desejar pode executar diretamente `ng s -o` ou `ng serve --open` para executar a aplicação e abrir automaticamente o navegador já na pagina da aplicação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📦 Tecnologias usadas
+- ![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+- ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+- ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
